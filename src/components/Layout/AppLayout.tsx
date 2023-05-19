@@ -9,7 +9,6 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
     <AppShell
       padding="md"
-      // navbar={}
       header={<HeaderComp />}
       styles={(theme) => ({
         main: {
