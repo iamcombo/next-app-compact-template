@@ -23,7 +23,7 @@ const HeaderComp = () => {
         <Flex align="center" justify="space-between" h="100%">
           <Group spacing={8} align="center">
             <ThemeIcon size={40} variant="light" radius={8}>
-              <IconBrandNextjs />
+              <IconBrandNextjs size={32} stroke={1.2} />
             </ThemeIcon>
             <Title order={4}>Next App Template</Title>
           </Group>
