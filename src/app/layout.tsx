@@ -1,11 +1,12 @@
 import { Raleway } from 'next/font/google';
 import type { ReactNode } from 'react';
 
+import { AppLayout } from '@/components/Layout';
 import EmotionProvider from '@/components/Provider/emotion';
 
 import '../styles/globals.css';
 
-const inter = Raleway({ subsets: ['latin'] });
+const raleway = Raleway({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Next App Template',
@@ -15,8 +16,10 @@ export const metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <EmotionProvider>{children}</EmotionProvider>
+      <body className={raleway.className}>
+        <EmotionProvider>
+          <AppLayout>{children}</AppLayout>
+        </EmotionProvider>
       </body>
     </html>
   );
