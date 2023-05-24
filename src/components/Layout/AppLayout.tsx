@@ -3,6 +3,7 @@
 import { AppShell, Container } from '@mantine/core';
 import type { ReactNode } from 'react';
 
+import { PageTransition } from '../Routes';
 import HeaderComp from './HeaderComp';
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
@@ -19,7 +20,9 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
         },
       })}
     >
-      <Container size={1280}>{children}</Container>
+      <PageTransition keyProp="{router.pathname}">
+        <Container size={1280}>{children}</Container>
+      </PageTransition>
     </AppShell>
   );
 };
